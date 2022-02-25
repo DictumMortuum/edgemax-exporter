@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus exporter for router pppoe metrics
+After=network.target
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/bin/edgemax-exporter
+
+[Install]
+WantedBy=multi-user.target
